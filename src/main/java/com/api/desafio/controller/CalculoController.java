@@ -11,6 +11,12 @@ public class CalculoController {
     @Autowired
     private CalculoService cs;
 
+    @GetMapping("/")
+    public String index(){
+        return "Parabéns! Você está acessando a API. Hope you like it :)";
+
+    }
+
     @CrossOrigin(origins = "*")
     @PostMapping("/calcular")
     public ResponseEntity<?> calcular(@RequestBody Integer numero){
